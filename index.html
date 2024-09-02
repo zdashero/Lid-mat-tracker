@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LID tracker with goal</title>
+    <title>UwU</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #1a202c;
-            color: #e2e8f0;
+            background-color: #1a202c; 
+            color: #e2e8f0; 
+        }
+        .counter {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .counter:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .goal-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 100px;
         }
     </style>
 </head>
 <body class="text-gray-300">
     <div class="container mx-auto p-6">
-        <h1 class="text-3xl font-bold text-center mb-6">Mat tracker</h1>
+        <h1 class="text-3xl font-bold text-center mb-6">Mat Tracker Lid</h1>
         
         <div id="counters" class="space-y-4"></div>
 

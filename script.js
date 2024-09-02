@@ -28,21 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const createCounter = (name = 'New Counter', value = 0, goal = 10, index = null) => {
         const counterElement = document.createElement('div');
-        counterElement.className = 'counter bg-gray-800 p-4 rounded-lg shadow-md flex flex-col space-y-4';
+        counterElement.className = 'counter bg-gray-800 p-6 rounded-lg shadow-md flex flex-col space-y-4';
 
         counterElement.innerHTML = `
             <div class="flex justify-between items-center">
-                <h2 contenteditable="true" class="counter-name text-xl font-semibold">${name}</h2>
-                <p class="text-sm">Goal: <span contenteditable="true" class="counter-goal">${goal}</span></p>
+                <h2 contenteditable="true" class="counter-name text-xl font-semibold flex-grow">${name}</h2>
+                <div class="goal-container">
+                    <p class="text-sm">Goal:</p>
+                    <p contenteditable="true" class="counter-goal">${goal}</p>
+                </div>
                 <button class="remove bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"></button>
             </div>
             <div class="relative w-full h-4 bg-gray-700 rounded">
                 <div class="progress-bar h-full bg-green-500 rounded text-center text-xs text-black font-bold leading-4"></div>
             </div>
-            <div class="flex items-center space-x-2">
-                <button class="decrement bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"></button>
-                <span class="counter-value text-2xl font-bold">${value}</span>
-                <button class="increment bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"></button>
+            <div class="flex items-center justify-center space-x-4">
+                <button class="decrement bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"></button>
+                <span class="counter-value text-xl font-bold">${value}</span>
+                <button class="increment bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600"></button>
             </div>
         `;
 
